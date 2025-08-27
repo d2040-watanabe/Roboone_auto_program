@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "Gyro_check",
+			"path": "..\\..\\Gyro_check"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"cmath": "cpp",
+			"cstdint": "cpp"
+		}
+	}
+}

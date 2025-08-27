@@ -1,0 +1,129 @@
+//sankaku
+void one_leg_stand_R()
+{
+    krs.setStrc(1, 10);
+    krs.setStrc(2, 10);
+    krs.setStrc(3, 10);
+    krs.setStrc(4, 10);
+    krs.setStrc(5, 20);
+    krs.setStrc(6, 60);
+    krs.setStrc(7, 60);
+    krs.setStrc(8, 20);
+    Set_Pos_All(0, 0, 0, 0, 0, -1000, -5500, 5500, 1000, -9000, -3000, 3000, 2000);
+    delay(70);
+    Set_Pos_All(0, 0, 0, 0, 0, -3000, -5000, 5000, 1000, -9000, -3000, 3000, 2000);
+    delay(70);
+    while (BIT_sankaku)
+    {
+      Set_Pos_All(0, 4500, 9500, -9500, 1000, -4500, -4500, 4500, 1200, -9000, -3000, 3000, 2000);
+      delay(10);
+      ReadVS2();
+      if(BIT_R2)
+      {
+          krs.setStrc(6, 60);
+          krs.setStrc(7, 90);
+          delay(10);
+          Set_Pos_All(0, 4500, 9500, -9500, 1000, -6000, 0, 0, -1200, -9000, -3000, 3000, 2000);
+          delay(50);
+      }
+      else if(BIT_R1)
+      {
+        krs.setStrc(1, 60);
+        krs.setStrc(2, 90);
+        krs.setStrc(3, 90);
+        krs.setStrc(4, 90);
+        krs.setStrc(5, 90);
+        krs.setStrc(6, 90);
+        krs.setStrc(7, 90);
+        krs.setStrc(8, 60);
+        delay(10);
+        Set_Pos_All(0, 3000, 0, 0, 0, -4500, -2000, 2000, -3000, -9000, -3000, 3000, 2000);
+        delay(100);
+        Set_Pos_All(0, 3000, 0, 0, 0, -9000, 0, 0, -6000, -9000, -3000, 3000, 2000);
+        delay(200);
+        Set_Pos_All(0, 4000, 5000, -5000, 1000, -4000, -5000, 5000, -1000, -3000, -3000, 3000, 3000);
+        delay(100);
+        while(BIT_R1)
+        {
+            Set_Pos_All(0, 3000, 9000, -9000, 4000, -3000, -9000, 9000, -4000, -7000, -1000, 7000, 1000);
+            delay(10);
+            ReadVS2();
+        }
+        break;
+      }
+    }
+}
+//sikaku
+void one_leg_stand_L()
+{
+    krs.setStrc(1, 90);
+    krs.setStrc(2, 60);
+    krs.setStrc(3, 60);
+    krs.setStrc(4, 30);
+    krs.setStrc(5, 90);
+    krs.setStrc(6, 10);
+    krs.setStrc(7, 10);
+    krs.setStrc(8, 10);
+    Set_Pos_All(0, 0, 4500, -4500, -1500, 0, 0, 0, 0, 0, 0, 9000, 3000);
+    delay(70);
+    Set_Pos_All(0, 4700, 5500, -5500, -1500, 0, 0, 0, 0, 0, 4000, 9000, 3000);
+    delay(70);
+    while (BIT_sikaku)
+    {
+      Set_Pos_All(0, 5000, 6500, -6500, -1500, -4500, -9500, 9500, 0, 0, 4000, 9500, 3000);
+      delay(10);
+      ReadVS2();
+      if(BIT_L2)
+      {
+          krs.setStrc(1, 60);
+          krs.setStrc(2, 60);
+          krs.setStrc(3, 90);
+          krs.setStrc(4, 60);
+          Set_Pos_All(0, 5200, 0, 0, 1500, -4500, -9500, 9500, 0, 0, 4000, 9500, 3000);
+          delay(50);
+      }
+      else if(BIT_L1)
+      {
+          krs.setStrc(1, 60);
+          krs.setStrc(2, 60);
+          krs.setStrc(3, 60);
+          krs.setStrc(4, 60);
+          krs.setStrc(5, 60);
+          krs.setStrc(6, 60);
+          krs.setStrc(7, 60);
+          krs.setStrc(8, 60);
+          delay(10);
+          Set_Pos_All(0, 4500, 2000, -2000, 3000, -3000, 0, 0, 0, -3000, -2000, 9000, 3000);
+          delay(100);
+          Set_Pos_All(0, 9000, 0, 0, 6000, -3000, 0, 0, -0, -3000, -2000, 9000, 3000);
+          delay(200);
+          Set_Pos_All(0, 4000, 5000, -5000, 1000, -4000, -5000, 5000, -1000, -3000, -3000, 3000, 3000);
+          delay(100);
+          while (BIT_L1)
+          {
+              Set_Pos_All(0, 3000, 9000, -9000, 4000, -3000, -9000, 9000, -4000, -7000, -1000, 7000, 1000);
+              delay(10);
+              ReadVS2();
+          }
+          break;
+      }
+    }
+}
+//側転できそう
+    krs.setStrc(1, 90);
+    krs.setStrc(2, 60);
+    krs.setStrc(3, 60);
+    krs.setStrc(4, 30);
+    krs.setStrc(5, 90);
+    krs.setStrc(6, 10);
+    krs.setStrc(7, 10);
+    krs.setStrc(8, 10);
+    Set_Pos_All(0, -1000, 4500, -4500, -1500, 0, 0, 0, 0, -2000, -3000, 9000, 3000);
+    delay(70);
+    Set_Pos_All(0, 4700, 5500, -5500, -1500, 1000, 0, 0, 0, -2000, -3000, 9000, 3000);
+    delay(70);
+    while (BIT_sikaku)
+    {
+      Set_Pos_All(0, 5000, 6500, -6500, -1500, -4500, -9500, 9500, 0, -3000, -3000, 9500, 4000);
+      delay(100);
+      ReadVS2();
